@@ -1,14 +1,17 @@
 let pelotica = [];
 let canvas = null;
 let ctx = null;
-const gravedad = 0.9;
-const numPelotas = 10000;
+const gravedad = 0.1;
+const numPelotas = 1;
 
 window.onload = function(){
     canvas = document.getElementById("canvas");
     ctx = this.canvas.getContext("2d");
     for (let i = 0; i < numPelotas; i++){
         pelotica.push(new Pelota())
+        pelotica.push(new Cuadrado())
+        pelotica.push(new Triangulo())
+        pelotica.push(new Estrella())
     }
     animar();
 }
